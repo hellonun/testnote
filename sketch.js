@@ -16,7 +16,7 @@ function setup() {
 }
 
 function draw() {
-  background(0,255,0);
+  background(212,0,136);
   if (started) {
       image(note,0,0,w,h); 
   
