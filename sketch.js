@@ -3,6 +3,7 @@ let noteMoved = false;
 let yPos; // yposition 
 let w = 250; 
 let h = 600; 
+let started = false; 
 
 function preload() {
   note = loadImage("note.png"); 
@@ -16,7 +17,8 @@ function setup() {
 
 function draw() {
   background(0);
-  image(note,0,0,w,h); 
+  if (started) {
+      image(note,0,0,w,h); 
   
   if (noteMoved) {
     yPos = height-mouseY/2; 
@@ -29,12 +31,15 @@ function draw() {
   }
   
     swipes.doStuff();
+  } 
+
 
 
 }
 
 
 function mousePressed() {
+  started = true; 
   swipes.pressed();
   noteMoved = true; 
 }
