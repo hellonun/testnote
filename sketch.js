@@ -1,8 +1,8 @@
 let note; 
 let noteMoved = false; 
 let yPos; // yposition 
-let w = 1080; 
-let h = 1920; 
+let w = 250; 
+let h = 600; 
 
 function preload() {
   note = loadImage("note.png"); 
